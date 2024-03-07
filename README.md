@@ -18,5 +18,5 @@ make
 ## Test With QEMU
 
 ```
-qemu-system-aarch64 -M raspi3b -serial null -serial stdio -display none  -kernel kernel8.img
+make run
 ```
