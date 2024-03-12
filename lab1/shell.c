@@ -29,7 +29,7 @@ void shell(){
      } else if (string_compare(input_string,"hello")) {
        uart_send_string("Hello World!\n");
      } else if (string_compare(input_string,"info")) {
-         if (mailbox_call()) {
+        //  if (mailbox_call()) {
            get_board_revision();
            uart_send_string("My board revision is: ");
            uart_binary_to_hex(mailbox[5]);
@@ -41,9 +41,9 @@ void shell(){
            uart_send_string("My ARM memory size is: ");
            uart_binary_to_hex(mailbox[6]);
            uart_send_string("\r\n");
-         } else {
-           uart_send_string("Unable to query serial!\n");
-         } 
+        //  } else {
+        //    uart_send_string("Unable to query serial!\n");
+        //  } 
      } else if (string_compare(input_string,"reboot")) {
            uart_send_string("Rebooting....\n");
            reset(1000);
