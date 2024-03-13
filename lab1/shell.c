@@ -47,6 +47,8 @@ void shell(){
      } else if (string_compare(input_string,"reboot")) {
            uart_send_string("Rebooting....\n");
            reset(1000);
-     }     
+     } else {
+          uart_send_string("Command not found....\nType in `help` to get instruction menu!\n");
+     }  
   }
 }
